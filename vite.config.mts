@@ -24,7 +24,7 @@ export default defineConfig({
     }),
   ],
   optimizeDeps: {
-    exclude: addons(__dirname),
+    exclude: ['@embroider/macros']
   },
   server: {
     watch: {

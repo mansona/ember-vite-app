@@ -1,7 +1,14 @@
 import { defineConfig } from "vite";
-import { resolver, hbs, scripts, templateTag, addons } from "@embroider/vite";
+import {
+  resolver,
+  hbs,
+  scripts,
+  templateTag,
+  esBuildResolver,
+} from "@embroider/vite";
 import { resolve } from "path";
 import { babel } from "@rollup/plugin-babel";
+import fs from "fs";
 
 const root = "node_modules/.embroider/rewritten-app";
 
@@ -24,7 +31,10 @@ export default defineConfig({
     }),
   ],
   optimizeDeps: {
-    exclude: ['@embroider/macros']
+    exclude: ["@embroider/macros"],
+    esbuildOptions: {
+      plugins: [esBuildResolver()],
+    },
   },
   server: {
     watch: {

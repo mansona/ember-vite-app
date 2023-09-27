@@ -4,6 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@embroider/macros': file:../embroider/packages/macros
+  '@embroider/shared-internals': file:../embroider/packages/shared-internals
+
 devDependencies:
   '@babel/core':
     specifier: ^7.22.6
@@ -24,14 +28,14 @@ devDependencies:
     specifier: ^3.0.3
     version: 3.2.0(ember-source@5.1.2)(webpack@5.88.2)
   '@embroider/compat':
-    specifier: '*'
-    version: 3.2.1(@embroider/core@3.2.1)
+    specifier: file:../embroider/packages/compat
+    version: file:../embroider/packages/compat(@embroider/core@3.2.1)
   '@embroider/core':
-    specifier: '*'
-    version: 3.2.1
+    specifier: file:../embroider/packages/core
+    version: file:../embroider/packages/core
   '@embroider/vite':
-    specifier: '*'
-    version: 0.1.2(@embroider/core@3.2.1)(vite@4.4.9)
+    specifier: file:../embroider/packages/vite
+    version: file:../embroider/packages/vite(@embroider/core@3.2.1)(vite@4.4.9)
   '@glimmer/component':
     specifier: ^1.1.2
     version: 1.1.2(@babel/core@7.22.15)
@@ -1530,7 +1534,7 @@ packages:
       '@ember-data/private-build-infra': 5.1.2
       '@ember-data/store': 5.1.2(@babel/core@7.22.15)(@ember-data/graph@5.1.2)(@ember-data/json-api@5.1.2)(@ember-data/legacy-compat@5.1.2)(@ember-data/model@5.1.2)(@ember-data/tracking@5.1.2)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(ember-source@5.1.2)
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       ember-cli-babel: 7.26.11
       ember-cli-test-info: 1.0.0
       ember-inflector: 4.0.2
@@ -1550,7 +1554,7 @@ packages:
       '@ember-data/store': 5.1.2(@babel/core@7.22.15)(@ember-data/graph@5.1.2)(@ember-data/json-api@5.1.2)(@ember-data/legacy-compat@5.1.2)(@ember-data/model@5.1.2)(@ember-data/tracking@5.1.2)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(ember-source@5.1.2)
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       ember-auto-import: 2.6.1(webpack@5.88.2)
       ember-cli-babel: 7.26.11
       webpack: 5.88.2
@@ -1572,7 +1576,7 @@ packages:
       '@ember-data/private-build-infra': 5.1.2
       '@ember-data/store': 5.1.2(@babel/core@7.22.15)(@ember-data/graph@5.1.2)(@ember-data/json-api@5.1.2)(@ember-data/legacy-compat@5.1.2)(@ember-data/model@5.1.2)(@ember-data/tracking@5.1.2)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(ember-source@5.1.2)
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@glint/template'
@@ -1590,7 +1594,7 @@ packages:
       '@ember-data/private-build-infra': 5.1.2
       '@ember-data/store': 5.1.2(@babel/core@7.22.15)(@ember-data/graph@5.1.2)(@ember-data/json-api@5.1.2)(@ember-data/legacy-compat@5.1.2)(@ember-data/model@5.1.2)(@ember-data/tracking@5.1.2)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(ember-source@5.1.2)
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@glint/template'
@@ -1612,7 +1616,7 @@ packages:
       '@ember-data/graph': 5.1.2(@ember-data/store@5.1.2)
       '@ember-data/json-api': 5.1.2(@ember-data/graph@5.1.2)(@ember-data/store@5.1.2)
       '@ember-data/private-build-infra': 5.1.2
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@glint/template'
@@ -1648,7 +1652,7 @@ packages:
       '@ember-data/tracking': 5.1.2
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       ember-cached-decorator-polyfill: 1.0.2(@babel/core@7.22.15)(ember-source@5.1.2)
       ember-cli-babel: 7.26.11
       ember-cli-string-utils: 1.1.0
@@ -1670,7 +1674,7 @@ packages:
       '@babel/plugin-transform-block-scoping': 7.22.15(@babel/core@7.22.15)
       '@babel/runtime': 7.22.15
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       babel-import-util: 1.4.1
       babel-plugin-debug-macros: 0.3.4(@babel/core@7.22.15)
       babel-plugin-filter-imports: 4.0.0
@@ -1701,7 +1705,7 @@ packages:
     dependencies:
       '@ember-data/private-build-infra': 5.1.2
       '@ember/test-waiters': 3.0.2
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@glint/template'
@@ -1723,7 +1727,7 @@ packages:
       '@ember-data/private-build-infra': 5.1.2
       '@ember-data/store': 5.1.2(@babel/core@7.22.15)(@ember-data/graph@5.1.2)(@ember-data/json-api@5.1.2)(@ember-data/legacy-compat@5.1.2)(@ember-data/model@5.1.2)(@ember-data/tracking@5.1.2)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(ember-source@5.1.2)
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       ember-cli-babel: 7.26.11
       ember-cli-test-info: 1.0.0
       ember-inflector: 4.0.2
@@ -1760,7 +1764,7 @@ packages:
       '@ember-data/private-build-infra': 5.1.2
       '@ember-data/tracking': 5.1.2
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       '@glimmer/tracking': 1.1.2
       ember-cached-decorator-polyfill: 1.0.2(@babel/core@7.22.15)(ember-source@5.1.2)
       ember-cli-babel: 7.26.11
@@ -1814,7 +1818,7 @@ packages:
       ember-source: ^4.0.0 || ^5.0.0
     dependencies:
       '@ember/test-waiters': 3.0.2
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       '@simple-dom/interface': 1.4.0
       broccoli-debug: 0.6.5
       broccoli-funnel: 3.0.8
@@ -1844,171 +1848,35 @@ packages:
     resolution: {integrity: sha512-siC9kP78uucEbpDcVyxjkwa76pcs5rVzDVpWO4PDc9EAXRX+pzmUuSTLAK3GztUwx7/PWhz1BenAivqdSvSgfg==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
-      '@embroider/shared-internals': 2.4.0
+      '@embroider/shared-internals': file:../embroider/packages/shared-internals
       broccoli-funnel: 3.0.8
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@embroider/compat@3.2.1(@embroider/core@3.2.1):
-    resolution: {integrity: sha512-nni6oQTPkSuZZKjXTFTZchO7chFBGKEN0O/xMGn9SxifM7EDl7+y6JlPQFchQcmLGi2DxglsystV0E/jTyc11Q==}
-    engines: {node: 12.* || 14.* || >= 16}
-    hasBin: true
-    peerDependencies:
-      '@embroider/core': ^3.2.1
-    dependencies:
-      '@babel/code-frame': 7.22.13
-      '@babel/core': 7.22.15
-      '@babel/plugin-syntax-dynamic-import': 7.8.3(@babel/core@7.22.15)
-      '@babel/plugin-transform-runtime': 7.22.15(@babel/core@7.22.15)
-      '@babel/preset-env': 7.22.15(@babel/core@7.22.15)
-      '@babel/runtime': 7.22.15
-      '@babel/traverse': 7.22.15
-      '@embroider/core': 3.2.1
-      '@embroider/macros': 1.13.1
-      '@types/babel__code-frame': 7.0.3
-      '@types/yargs': 17.0.24
-      assert-never: 1.2.1
-      babel-import-util: 2.0.0
-      babel-plugin-ember-template-compilation: 2.2.0
-      babel-plugin-syntax-dynamic-import: 6.18.0
-      babylon: 6.18.0
-      bind-decorator: 1.0.11
-      broccoli: 3.5.2
-      broccoli-concat: 4.2.5
-      broccoli-file-creator: 2.1.1
-      broccoli-funnel: 3.0.8
-      broccoli-merge-trees: 4.2.0
-      broccoli-persistent-filter: 3.1.3
-      broccoli-plugin: 4.0.7
-      broccoli-source: 3.0.1
-      chalk: 4.1.2
-      debug: 4.3.4
-      escape-string-regexp: 4.0.0
-      fast-sourcemap-concat: 1.4.0
-      fs-extra: 9.1.0
-      fs-tree-diff: 2.0.1
-      jsdom: 16.7.0
-      lodash: 4.17.21
-      pkg-up: 3.1.0
-      resolve: 1.22.4
-      resolve-package-path: 4.0.3
-      semver: 7.5.4
-      symlink-or-copy: 1.3.1
-      tree-sync: 2.1.0
-      typescript-memoize: 1.1.1
-      walk-sync: 3.0.0
-      yargs: 17.7.2
-    transitivePeerDependencies:
-      - '@glint/template'
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
+  /@esbuild/android-arm64@0.17.19:
+    resolution: {integrity: sha512-KBMWvEZooR7+kzY0BtbTQn0OAYY7CsiydT63pVEaPtVYF0hXbUaOyZog37DKxK7NF3XacBJOpYT4adIJh+avxA==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
     dev: true
-
-  /@embroider/core@3.2.1:
-    resolution: {integrity: sha512-GhKc9pqPcbKpvUkhTnRqJhr3Pc4xslnzhrGQqBDBNwOZ0/zUU02wpiB+PmiA3+mZFTZNQoUCq4A7vm5dXraQug==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      '@babel/core': 7.22.15
-      '@babel/parser': 7.22.15
-      '@babel/traverse': 7.22.15
-      '@embroider/macros': 1.13.1
-      '@embroider/shared-internals': 2.4.0
-      assert-never: 1.2.1
-      babel-plugin-ember-template-compilation: 2.2.0
-      broccoli-node-api: 1.7.0
-      broccoli-persistent-filter: 3.1.3
-      broccoli-plugin: 4.0.7
-      broccoli-source: 3.0.1
-      debug: 4.3.4
-      fast-sourcemap-concat: 1.4.0
-      filesize: 10.0.12
-      fs-extra: 9.1.0
-      fs-tree-diff: 2.0.1
-      handlebars: 4.7.8
-      js-string-escape: 1.0.1
-      jsdom: 16.7.0
-      lodash: 4.17.21
-      resolve: 1.22.4
-      resolve-package-path: 4.0.3
-      typescript-memoize: 1.1.1
-      walk-sync: 3.0.0
-    transitivePeerDependencies:
-      - '@glint/template'
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: true
-
-  /@embroider/macros@1.13.1:
-    resolution: {integrity: sha512-4htraP/rNIht8uCxXoc59Bw2EsBFfc4YUQD9XSpzJ4xUr1V0GQf9wL/noeSuYSxIhwRfZOErnJhsdyf1hH+I/A==}
-    engines: {node: 12.* || 14.* || >= 16}
-    peerDependencies:
-      '@glint/template': ^1.0.0
-    peerDependenciesMeta:
-      '@glint/template':
-        optional: true
-    dependencies:
-      '@embroider/shared-internals': 2.4.0
-      assert-never: 1.2.1
-      babel-import-util: 2.0.0
-      ember-cli-babel: 7.26.11
-      find-up: 5.0.0
-      lodash: 4.17.21
-      resolve: 1.22.4
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@embroider/shared-internals@2.4.0:
-    resolution: {integrity: sha512-pFE05ebenWMC9XAPRjadYCXXb6VmqjkhYN5uqkhPo+VUmMHnx7sZYYxqGjxfVuhC/ghS/BNlOffOCXDOoE7k7g==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      babel-import-util: 2.0.0
-      debug: 4.3.4
-      ember-rfc176-data: 0.3.18
-      fs-extra: 9.1.0
-      js-string-escape: 1.0.1
-      lodash: 4.17.21
-      resolve-package-path: 4.0.3
-      semver: 7.5.4
-      typescript-memoize: 1.1.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@embroider/vite@0.1.2(@embroider/core@3.2.1)(vite@4.4.9):
-    resolution: {integrity: sha512-0SUWCfVjnCXxurgOk0vlH+R1qGVM+4Pq6xZOBkfiWhl/9AdKeehS/82mVnPLptkSRCNdhMKa57x92uIWSCOZPQ==}
-    peerDependencies:
-      '@embroider/core': ^3.2.1
-      vite: ^4.3.9
-    dependencies:
-      '@embroider/core': 3.2.1
-      '@rollup/pluginutils': 4.2.1
-      assert-never: 1.2.1
-      content-tag: 1.0.1
-      debug: 4.3.4
-      fs-extra: 10.1.0
-      jsdom: 16.7.0
-      source-map-url: 0.4.1
-      terser: 5.19.4
-      vite: 4.4.9
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - supports-color
-      - utf-8-validate
-    dev: true
+    optional: true
 
   /@esbuild/android-arm64@0.18.20:
     resolution: {integrity: sha512-Nz4rJcchGDtENV0eMKUNa6L12zz2zBDXuhj/Vjh18zGqB44Bi7MBMSXjgunJgjRhCmKOjnPuZp4Mb6OKqtMHLQ==}
     engines: {node: '>=12'}
     cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/android-arm@0.17.19:
+    resolution: {integrity: sha512-rIKddzqhmav7MSmoFCmDIb6e2W57geRsM94gV2l38fzhXMwq7hZoClug9USI2pFRGL06f4IOPHHpFNOkWieR8A==}
+    engines: {node: '>=12'}
+    cpu: [arm]
     os: [android]
     requiresBuild: true
     dev: true
@@ -2023,6 +1891,15 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/android-x64@0.17.19:
+    resolution: {integrity: sha512-uUTTc4xGNDT7YSArp/zbtmbhO0uEEK9/ETW29Wk1thYUJBz3IVnvgEiEwEa9IeLyvnpKrWK64Utw2bgUmDveww==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/android-x64@0.18.20:
     resolution: {integrity: sha512-8GDdlePJA8D6zlZYJV/jnrRAi6rOiNaCC/JclcXpB+KIuvfBN4owLtgzY2bsxnx666XjJx2kDPUmnTtR8qKQUg==}
     engines: {node: '>=12'}
@@ -2032,10 +1909,28 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/darwin-arm64@0.17.19:
+    resolution: {integrity: sha512-80wEoCfF/hFKM6WE1FyBHc9SfUblloAWx6FJkFWTWiCoht9Mc0ARGEM47e67W9rI09YoUxJL68WHfDRYEAvOhg==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/darwin-arm64@0.18.20:
     resolution: {integrity: sha512-bxRHW5kHU38zS2lPTPOyuyTm+S+eobPUnTNkdJEfAddYgEcll4xkT8DB9d2008DtTbl7uJag2HuE5NZAZgnNEA==}
     engines: {node: '>=12'}
     cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/darwin-x64@0.17.19:
+    resolution: {integrity: sha512-IJM4JJsLhRYr9xdtLytPLSH9k/oxR3boaUIYiHkAawtwNOXKE8KoU8tMvryogdcT8AU+Bflmh81Xn6Q0vTZbQw==}
+    engines: {node: '>=12'}
+    cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
@@ -2050,10 +1945,28 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/freebsd-arm64@0.17.19:
+    resolution: {integrity: sha512-pBwbc7DufluUeGdjSU5Si+P3SoMF5DQ/F/UmTSb8HXO80ZEAJmrykPyzo1IfNbAoaqw48YRpv8shwd1NoI0jcQ==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/freebsd-arm64@0.18.20:
     resolution: {integrity: sha512-yqDQHy4QHevpMAaxhhIwYPMv1NECwOvIpGCZkECn8w2WFHXjEwrBn3CeNIYsibZ/iZEUemj++M26W3cNR5h+Tw==}
     engines: {node: '>=12'}
     cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/freebsd-x64@0.17.19:
+    resolution: {integrity: sha512-4lu+n8Wk0XlajEhbEffdy2xy53dpR06SlzvhGByyg36qJw6Kpfk7cp45DR/62aPH9mtJRmIyrXAS5UWBrJT6TQ==}
+    engines: {node: '>=12'}
+    cpu: [x64]
     os: [freebsd]
     requiresBuild: true
     dev: true
@@ -2068,10 +1981,28 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/linux-arm64@0.17.19:
+    resolution: {integrity: sha512-ct1Tg3WGwd3P+oZYqic+YZF4snNl2bsnMKRkb3ozHmnM0dGWuxcPTTntAF6bOP0Sp4x0PjSF+4uHQ1xvxfRKqg==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/linux-arm64@0.18.20:
     resolution: {integrity: sha512-2YbscF+UL7SQAVIpnWvYwM+3LskyDmPhe31pE7/aoTMFKKzIc9lLbyGUpmmb8a8AixOL61sQ/mFh3jEjHYFvdA==}
     engines: {node: '>=12'}
     cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-arm@0.17.19:
+    resolution: {integrity: sha512-cdmT3KxjlOQ/gZ2cjfrQOtmhG4HJs6hhvm3mWSRDPtZ/lP5oe8FWceS10JaSJC13GBd4eH/haHnqf7hhGNLerA==}
+    engines: {node: '>=12'}
+    cpu: [arm]
     os: [linux]
     requiresBuild: true
     dev: true
@@ -2086,10 +2017,28 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/linux-ia32@0.17.19:
+    resolution: {integrity: sha512-w4IRhSy1VbsNxHRQpeGCHEmibqdTUx61Vc38APcsRbuVgK0OPEnQ0YD39Brymn96mOx48Y2laBQGqgZ0j9w6SQ==}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/linux-ia32@0.18.20:
     resolution: {integrity: sha512-P4etWwq6IsReT0E1KHU40bOnzMHoH73aXp96Fs8TIT6z9Hu8G6+0SHSw9i2isWrD2nbx2qo5yUqACgdfVGx7TA==}
     engines: {node: '>=12'}
     cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-loong64@0.17.19:
+    resolution: {integrity: sha512-2iAngUbBPMq439a+z//gE+9WBldoMp1s5GWsUSgqHLzLJ9WoZLZhpwWuym0u0u/4XmZ3gpHmzV84PonE+9IIdQ==}
+    engines: {node: '>=12'}
+    cpu: [loong64]
     os: [linux]
     requiresBuild: true
     dev: true
@@ -2104,10 +2053,28 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/linux-mips64el@0.17.19:
+    resolution: {integrity: sha512-LKJltc4LVdMKHsrFe4MGNPp0hqDFA1Wpt3jE1gEyM3nKUvOiO//9PheZZHfYRfYl6AwdTH4aTcXSqBerX0ml4A==}
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/linux-mips64el@0.18.20:
     resolution: {integrity: sha512-d5NeaXZcHp8PzYy5VnXV3VSd2D328Zb+9dEq5HE6bw6+N86JVPExrA6O68OPwobntbNJ0pzCpUFZTo3w0GyetQ==}
     engines: {node: '>=12'}
     cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-ppc64@0.17.19:
+    resolution: {integrity: sha512-/c/DGybs95WXNS8y3Ti/ytqETiW7EU44MEKuCAcpPto3YjQbyK3IQVKfF6nbghD7EcLUGl0NbiL5Rt5DMhn5tg==}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
     os: [linux]
     requiresBuild: true
     dev: true
@@ -2122,10 +2089,28 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/linux-riscv64@0.17.19:
+    resolution: {integrity: sha512-FC3nUAWhvFoutlhAkgHf8f5HwFWUL6bYdvLc/TTuxKlvLi3+pPzdZiFKSWz/PF30TB1K19SuCxDTI5KcqASJqA==}
+    engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/linux-riscv64@0.18.20:
     resolution: {integrity: sha512-WSxo6h5ecI5XH34KC7w5veNnKkju3zBRLEQNY7mv5mtBmrP/MjNBCAlsM2u5hDBlS3NGcTQpoBvRzqBcRtpq1A==}
     engines: {node: '>=12'}
     cpu: [riscv64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-s390x@0.17.19:
+    resolution: {integrity: sha512-IbFsFbxMWLuKEbH+7sTkKzL6NJmG2vRyy6K7JJo55w+8xDk7RElYn6xvXtDW8HCfoKBFK69f3pgBJSUSQPr+4Q==}
+    engines: {node: '>=12'}
+    cpu: [s390x]
     os: [linux]
     requiresBuild: true
     dev: true
@@ -2140,11 +2125,29 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/linux-x64@0.17.19:
+    resolution: {integrity: sha512-68ngA9lg2H6zkZcyp22tsVt38mlhWde8l3eJLWkyLrp4HwMUr3c1s/M2t7+kHIhvMjglIBrFpncX1SzMckomGw==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/linux-x64@0.18.20:
     resolution: {integrity: sha512-UYqiqemphJcNsFEskc73jQ7B9jgwjWrSayxawS6UVFZGWrAAtkzjxSqnoclCXxWtfwLdzU+vTpcNYhpn43uP1w==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/netbsd-x64@0.17.19:
+    resolution: {integrity: sha512-CwFq42rXCR8TYIjIfpXCbRX0rp1jo6cPIUPSaWwzbVI4aOfX96OXY8M6KNmtPcg7QjYeDmN+DD0Wp3LaBOLf4Q==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
     requiresBuild: true
     dev: true
     optional: true
@@ -2158,11 +2161,29 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/openbsd-x64@0.17.19:
+    resolution: {integrity: sha512-cnq5brJYrSZ2CF6c35eCmviIN3k3RczmHz8eYaVlNasVqsNY+JKohZU5MKmaOI+KkllCdzOKKdPs762VCPC20g==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/openbsd-x64@0.18.20:
     resolution: {integrity: sha512-e5e4YSsuQfX4cxcygw/UCPIEP6wbIL+se3sxPdCiMbFLBWu0eiZOJ7WoD+ptCLrmjZBK1Wk7I6D/I3NglUGOxg==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [openbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/sunos-x64@0.17.19:
+    resolution: {integrity: sha512-vCRT7yP3zX+bKWFeP/zdS6SqdWB8OIpaRq/mbXQxTGHnIxspRtigpkUcDMlSCOejlHowLqII7K2JKevwyRP2rg==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
     requiresBuild: true
     dev: true
     optional: true
@@ -2176,6 +2197,15 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/win32-arm64@0.17.19:
+    resolution: {integrity: sha512-yYx+8jwowUstVdorcMdNlzklLYhPxjniHWFKgRqH7IFlUEa0Umu3KuYplf1HUZZ422e3NU9F4LGb+4O0Kdcaag==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/win32-arm64@0.18.20:
     resolution: {integrity: sha512-ddYFR6ItYgoaq4v4JmQQaAI5s7npztfV4Ag6NrhiaW0RrnOXqBkgwZLofVTlq1daVTQNhtI5oieTvkRPfZrePg==}
     engines: {node: '>=12'}
@@ -2185,10 +2215,28 @@ packages:
     dev: true
     optional: true
 
+  /@esbuild/win32-ia32@0.17.19:
+    resolution: {integrity: sha512-eggDKanJszUtCdlVs0RB+h35wNlb5v4TWEkq4vZcmVt5u/HiDZrTXe2bWFQUez3RgNHwx/x4sk5++4NSSicKkw==}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@esbuild/win32-ia32@0.18.20:
     resolution: {integrity: sha512-Wv7QBi3ID/rROT08SABTS7eV4hX26sVduqDOTe1MvGMjNd3EjOz4b7zeexIR62GTIEKrfJXKL9LFxTYgkyeu7g==}
     engines: {node: '>=12'}
     cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/win32-x64@0.17.19:
+    resolution: {integrity: sha512-lAhycmKnVOuRYNtRtatQR1LPQf2oYCkRGkSFnseDAKPl8lu5SOsK/e1sXe5a0Pc5kHIHe6P2I/ilntNv2xf3cA==}
+    engines: {node: '>=12'}
+    cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
@@ -5139,8 +5187,8 @@ packages:
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.22.15)
       '@babel/plugin-proposal-decorators': 7.22.15(@babel/core@7.22.15)
       '@babel/preset-env': 7.22.15(@babel/core@7.22.15)
-      '@embroider/macros': 1.13.1
-      '@embroider/shared-internals': 2.4.0
+      '@embroider/macros': file:../embroider/packages/macros
+      '@embroider/shared-internals': file:../embroider/packages/shared-internals
       babel-loader: 8.3.0(@babel/core@7.22.15)(webpack@5.88.2)
       babel-plugin-ember-modules-api-polyfill: 3.5.0
       babel-plugin-htmlbars-inline-precompile: 5.3.1
@@ -5179,8 +5227,8 @@ packages:
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.22.15)
       '@babel/plugin-proposal-decorators': 7.22.15(@babel/core@7.22.15)
       '@babel/preset-env': 7.22.15(@babel/core@7.22.15)
-      '@embroider/macros': 1.13.1
-      '@embroider/shared-internals': 2.4.0
+      '@embroider/macros': file:../embroider/packages/macros
+      '@embroider/shared-internals': file:../embroider/packages/shared-internals
       babel-loader: 8.3.0(@babel/core@7.22.15)(webpack@5.88.2)
       babel-plugin-ember-modules-api-polyfill: 3.5.0
       babel-plugin-ember-template-compilation: 2.2.0
@@ -5231,7 +5279,7 @@ packages:
     peerDependencies:
       ember-source: ^3.13.0 || ^4.0.0 || >= 5.0.0
     dependencies:
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       '@glimmer/tracking': 1.1.2
       babel-import-util: 1.4.1
       ember-cache-primitive-polyfill: 1.0.1(@babel/core@7.22.15)
@@ -5734,7 +5782,7 @@ packages:
       '@ember-data/tracking': 5.1.2
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.13.1
+      '@embroider/macros': file:../embroider/packages/macros
       '@glimmer/env': 0.1.7
       broccoli-merge-trees: 4.2.0
       ember-auto-import: 2.6.1(webpack@5.88.2)
@@ -6146,6 +6194,36 @@ packages:
       is-callable: 1.2.7
       is-date-object: 1.0.5
       is-symbol: 1.0.4
+    dev: true
+
+  /esbuild@0.17.19:
+    resolution: {integrity: sha512-XQ0jAPFkK/u3LcVRcvVHQcTIqD6E2H1fvZMA5dQPSOWb3suUbWbfbRf94pjc0bNzRYLfIrDRQXr7X+LHIm5oHw==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@esbuild/android-arm': 0.17.19
+      '@esbuild/android-arm64': 0.17.19
+      '@esbuild/android-x64': 0.17.19
+      '@esbuild/darwin-arm64': 0.17.19
+      '@esbuild/darwin-x64': 0.17.19
+      '@esbuild/freebsd-arm64': 0.17.19
+      '@esbuild/freebsd-x64': 0.17.19
+      '@esbuild/linux-arm': 0.17.19
+      '@esbuild/linux-arm64': 0.17.19
+      '@esbuild/linux-ia32': 0.17.19
+      '@esbuild/linux-loong64': 0.17.19
+      '@esbuild/linux-mips64el': 0.17.19
+      '@esbuild/linux-ppc64': 0.17.19
+      '@esbuild/linux-riscv64': 0.17.19
+      '@esbuild/linux-s390x': 0.17.19
+      '@esbuild/linux-x64': 0.17.19
+      '@esbuild/netbsd-x64': 0.17.19
+      '@esbuild/openbsd-x64': 0.17.19
+      '@esbuild/sunos-x64': 0.17.19
+      '@esbuild/win32-arm64': 0.17.19
+      '@esbuild/win32-ia32': 0.17.19
+      '@esbuild/win32-x64': 0.17.19
     dev: true
 
   /esbuild@0.18.20:
@@ -12022,4 +12100,169 @@ packages:
   /yocto-queue@1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
+    dev: true
+
+  file:../embroider/packages/compat(@embroider/core@3.2.1):
+    resolution: {directory: ../embroider/packages/compat, type: directory}
+    id: file:../embroider/packages/compat
+    name: '@embroider/compat'
+    engines: {node: 12.* || 14.* || >= 16}
+    hasBin: true
+    peerDependencies:
+      '@embroider/core': workspace:^
+    dependencies:
+      '@babel/code-frame': 7.22.13
+      '@babel/core': 7.22.15
+      '@babel/plugin-syntax-dynamic-import': 7.8.3(@babel/core@7.22.15)
+      '@babel/plugin-transform-runtime': 7.22.15(@babel/core@7.22.15)
+      '@babel/preset-env': 7.22.15(@babel/core@7.22.15)
+      '@babel/runtime': 7.22.15
+      '@babel/traverse': 7.22.15
+      '@embroider/core': file:../embroider/packages/core
+      '@embroider/macros': file:../embroider/packages/macros
+      '@types/babel__code-frame': 7.0.3
+      '@types/yargs': 17.0.24
+      assert-never: 1.2.1
+      babel-import-util: 2.0.0
+      babel-plugin-ember-template-compilation: 2.2.0
+      babel-plugin-syntax-dynamic-import: 6.18.0
+      babylon: 6.18.0
+      bind-decorator: 1.0.11
+      broccoli: 3.5.2
+      broccoli-concat: 4.2.5
+      broccoli-file-creator: 2.1.1
+      broccoli-funnel: 3.0.8
+      broccoli-merge-trees: 4.2.0
+      broccoli-persistent-filter: 3.1.3
+      broccoli-plugin: 4.0.7
+      broccoli-source: 3.0.1
+      chalk: 4.1.2
+      debug: 4.3.4
+      escape-string-regexp: 4.0.0
+      fast-sourcemap-concat: 1.4.0
+      fs-extra: 9.1.0
+      fs-tree-diff: 2.0.1
+      jsdom: 16.7.0
+      lodash: 4.17.21
+      pkg-up: 3.1.0
+      resolve: 1.22.4
+      resolve-package-path: 4.0.3
+      semver: 7.5.4
+      symlink-or-copy: 1.3.1
+      tree-sync: 2.1.0
+      typescript-memoize: 1.1.1
+      walk-sync: 3.0.0
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - '@glint/template'
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: true
+
+  file:../embroider/packages/core:
+    resolution: {directory: ../embroider/packages/core, type: directory}
+    name: '@embroider/core'
+    engines: {node: 12.* || 14.* || >= 16}
+    dependencies:
+      '@babel/core': 7.22.15
+      '@babel/parser': 7.22.15
+      '@babel/traverse': 7.22.15
+      '@embroider/macros': file:../embroider/packages/macros
+      '@embroider/shared-internals': file:../embroider/packages/shared-internals
+      assert-never: 1.2.1
+      babel-plugin-ember-template-compilation: 2.2.0
+      broccoli-node-api: 1.7.0
+      broccoli-persistent-filter: 3.1.3
+      broccoli-plugin: 4.0.7
+      broccoli-source: 3.0.1
+      debug: 4.3.4
+      fast-sourcemap-concat: 1.4.0
+      filesize: 10.0.12
+      fs-extra: 9.1.0
+      fs-tree-diff: 2.0.1
+      handlebars: 4.7.8
+      js-string-escape: 1.0.1
+      jsdom: 16.7.0
+      lodash: 4.17.21
+      resolve: 1.22.4
+      resolve-package-path: 4.0.3
+      typescript-memoize: 1.1.1
+      walk-sync: 3.0.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
+    dev: true
+
+  file:../embroider/packages/macros:
+    resolution: {directory: ../embroider/packages/macros, type: directory}
+    name: '@embroider/macros'
+    engines: {node: 12.* || 14.* || >= 16}
+    peerDependencies:
+      '@glint/template': ^1.0.0
+    peerDependenciesMeta:
+      '@glint/template':
+        optional: true
+    dependencies:
+      '@embroider/shared-internals': file:../embroider/packages/shared-internals
+      assert-never: 1.2.1
+      babel-import-util: 2.0.0
+      ember-cli-babel: 7.26.11
+      find-up: 5.0.0
+      lodash: 4.17.21
+      resolve: 1.22.4
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  file:../embroider/packages/shared-internals:
+    resolution: {directory: ../embroider/packages/shared-internals, type: directory}
+    name: '@embroider/shared-internals'
+    engines: {node: 12.* || 14.* || >= 16}
+    dependencies:
+      babel-import-util: 2.0.0
+      debug: 4.3.4
+      ember-rfc176-data: 0.3.18
+      fs-extra: 9.1.0
+      js-string-escape: 1.0.1
+      lodash: 4.17.21
+      resolve-package-path: 4.0.3
+      semver: 7.5.4
+      typescript-memoize: 1.1.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  file:../embroider/packages/vite(@embroider/core@3.2.1)(vite@4.4.9):
+    resolution: {directory: ../embroider/packages/vite, type: directory}
+    id: file:../embroider/packages/vite
+    name: '@embroider/vite'
+    peerDependencies:
+      '@embroider/core': workspace:^
+      vite: ^4.3.9
+    dependencies:
+      '@babel/core': 7.22.15
+      '@embroider/core': file:../embroider/packages/core
+      '@embroider/macros': file:../embroider/packages/macros
+      '@rollup/pluginutils': 4.2.1
+      assert-never: 1.2.1
+      content-tag: 1.0.1
+      debug: 4.3.4
+      esbuild: 0.17.19
+      fs-extra: 10.1.0
+      jsdom: 16.7.0
+      source-map-url: 0.4.1
+      terser: 5.19.4
+      vite: 4.4.9
+    transitivePeerDependencies:
+      - '@glint/template'
+      - bufferutil
+      - canvas
+      - supports-color
+      - utf-8-validate
     dev: true

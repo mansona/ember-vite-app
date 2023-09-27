@@ -33,9 +33,9 @@
     "@ember/optional-features": "^2.0.0",
     "@ember/string": "^3.1.1",
     "@ember/test-helpers": "^3.0.3",
-    "@embroider/compat": "*",
-    "@embroider/core": "*",
-    "@embroider/vite": "*",
+    "@embroider/compat": "file:../embroider/packages/compat",
+    "@embroider/core": "file:../embroider/packages/core",
+    "@embroider/vite": "file:../embroider/packages/vite",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",
     "@rollup/plugin-babel": "^5.3.1",
@@ -83,5 +83,11 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "pnpm": {
+    "overrides": {
+      "@embroider/macros": "file:../embroider/packages/macros",
+      "@embroider/shared-internals": "file:../embroider/packages/shared-internals"
+    }
   }
 }

@@ -146,6 +146,9 @@ devDependencies:
   tracked-built-ins:
     specifier: ^3.1.1
     version: 3.1.1
+  tracked-toolbox:
+    specifier: ^2.0.0
+    version: 2.0.0(@babel/core@7.22.15)(ember-source@5.1.2)
   typescript:
     specifier: ^5.1.6
     version: 5.2.2
@@ -11422,6 +11425,23 @@ packages:
       ember-cli-typescript: 5.2.1
       ember-tracked-storage-polyfill: 1.0.0
     transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /tracked-toolbox@2.0.0(@babel/core@7.22.15)(ember-source@5.1.2):
+    resolution: {integrity: sha512-adZtX+RGN6F+pWs/5JqVuDxLhuia4uhqmQp+UlUaxpykWjDFETtAdQR+LdDJiFPXFAXnS6FBqn/tnSLJQCm3Yw==}
+    engines: {node: 14.* || 16.* || >= 18}
+    peerDependencies:
+      ember-source: '*'
+    peerDependenciesMeta:
+      ember-source:
+        optional: true
+    dependencies:
+      '@embroider/addon-shim': 1.8.6
+      ember-cache-primitive-polyfill: 1.0.1(@babel/core@7.22.15)
+      ember-source: 5.1.2(@babel/core@7.22.15)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.88.2)
+    transitivePeerDependencies:
+      - '@babel/core'
       - supports-color
     dev: true
 

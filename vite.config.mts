@@ -25,6 +25,7 @@ export default defineConfig({
   ],
   optimizeDeps: optimizeDeps(),
   server: {
+    // hmr: false,
     watch: {
       ignored: ["!**/node_modules/.embroider/rewritten-app/**"],
     },

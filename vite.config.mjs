@@ -1,5 +1,11 @@
 import { defineConfig } from "vite";
-import { resolver, hbs, scripts, templateTag, optimizeDeps } from "@embroider/vite";
+import {
+  resolver,
+  hbs,
+  scripts,
+  templateTag,
+  optimizeDeps,
+} from "@embroider/vite";
 import { resolve } from "path";
 import { babel } from "@rollup/plugin-babel";
 
@@ -25,6 +31,8 @@ export default defineConfig({
   ],
   optimizeDeps: optimizeDeps(),
   server: {
+    hmr: false,
+    port: 4200,
     watch: {
       ignored: ["!**/node_modules/.embroider/rewritten-app/**"],
     },

@@ -1,0 +1,10 @@
+diff --git a/index.mjs b/index.mjs
+index a70a0ec5afcd96ef555901eedbaa6a4b3f7af9e6..a56a50fd9754660c04a7dd3b3c52b06245e07f93 100644
+--- a/index.mjs
++++ b/index.mjs
+@@ -3,5 +3,4 @@ export * from './src/esbuild-resolver.js';
+ export * from './src/hbs.js';
+ export * from './src/scripts.js';
+ export * from './src/template-tag.js';
+-export * from './src/addons.js';
+ export * from './src/optimize-deps.js';
